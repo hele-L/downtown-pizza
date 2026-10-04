@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="card">
+        <h1>Pizza Ordering System</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Customer Information</legend>
+                    <div class="form-grid">
+                        <label for="name">Name (Required):</label>
+                        <input type="text" id="name" required minlength="2" placeholder="Your Name">
+                        <label for="address">Address (Required):</label>
+                        <input type="text" id="address" required placeholder="Your Address">
+                        <label for="phone">Phone (Required):</label>
+                        <input type="tel" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+                <legend>The Order</legend>
+                    <div class="form-grid">
+                        <label for="crust">Crust Type (Required):</label>
+                        <input type="radio", name="crust" value="thin"> Thin
+                        <input type="radio", name="crust" value="classic"> Classic
+                        <input type="radio", name=""crust" value="deep-dish"> Deep Dish
+                        <label for="toppings">Toppings (Select at least 4 options):</label>
+                        <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                        <label for="pepperoni">Pepperoni</label>
+                        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                        <label for="mushrooms">Mushrooms</label>
+                        <input type="checkbox" id="Olives" name="toppings" value="olives">
+                        <label for="olives">Olives</label>
+                        <input type="checkbox" id="green-peppers" name="toppings" value="green-peppers">
+                        <label for="green-peppers">Green-peppers</label>
+                        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                        <label for="pineapple">Pineapple</label>
+                        <input type="checkbox" id="onions" name="toppings" value="onions">
+                        <label for="onions">Onions</label>
+                        <label for="quantity">Quantity (Required):</label>
+                        <input type="number" id="quantity" required min="1" max="10">
+                    </div>
+                <legend>Delivery and Payment</legend>
+                        
+                </form>
+             
+                    
+                
+</html>
