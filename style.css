@@ -1,10 +1,32 @@
 
 
 
-
-@media screen and (max-width: 768px) {
-  body {
-    width: 100%;
-  }
-    
+main{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
 }
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Mobile Responsive breakpoint */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    label {
+        text-align: left;
+    }
+}
+
