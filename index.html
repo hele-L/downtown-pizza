@@ -22,12 +22,16 @@
                         <label for="phone">Phone (Required):</label>
                         <input type="tel" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
                     </div>
+            </fieldset>
+
+            <fieldset>
                 <legend>The Order</legend>
-                    <div class="form-grid">
+                    <div class="flex-row">
                         <label for="crust">Crust Type (Required):</label>
-                        <input type="radio", name="crust" value="thin"> Thin
-                        <input type="radio", name="crust" value="classic"> Classic
-                        <input type="radio", name=""crust" value="deep-dish"> Deep Dish
+                        <input type="radio" name="crust" value="thin" required> Thin
+                        <input type="radio" name="crust" value="classic" required> Classic
+                        <input type="radio" name="crust" value="deep-dish" required> Deep Dish
+
                         <label for="toppings">Toppings (Select at least 4 options):</label>
                         <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
                         <label for="pepperoni">Pepperoni</label>
@@ -44,10 +48,69 @@
                         <label for="quantity">Quantity (Required):</label>
                         <input type="number" id="quantity" required min="1" max="10">
                     </div>
+            </fieldset>
+
+            <fieldset>
                 <legend>Delivery and Payment</legend>
-                        
-                </form>
+                <div class="form-grid">
+                    <label for="delivery instructions">Delivery Instructions:</label>
+                    <input type="texarea" id="delivery instructions" placeholder="Any special instructions can be added here.">
+                    <label for="preferred delivery date and time">Preferred Delivery Date and Time:</label>
+                    <input type="datetime-local" id="preferred delivery date and time">
+                    <label for="payment method">Payment Method:</label>
+                    <select type="dropdown" id="payment method" required>
+                        <option value="Cash">Cash</option>
+                        <option value="Card">Card</option>
+                        <option value="Debit">Debit</option>
+                    </select>
+                </div>
+            </fieldset>    
+            
+            <button type="submit">Place Order</button><hr/>
+            <button type="reset">Reset Form</button>
+
+        </form>
              
-                    
+        <aside>
+            <table>
+                <caption>Pizza Order Summary</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Details</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Base pizza</td>
+                        <td>Large (12"), Thin crust</td>
+                        <td>$16.99</td>
+                    </tr>
+
+                    <tr>
+                        <td>Toppings</td>
+                        <td>Mushrooms, Olives, Extra cheese</td>
+                        <td>$4.50</td>
+                    </tr>
+
+                    <tr>
+                        <td>Delivery fee</td>
+                        <td>Standard delivery</td>
+                        <td>$3.99</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>(example total)</td>
+                        <td>$25.48</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </aside>            
                 
 </html>
