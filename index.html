@@ -9,8 +9,8 @@
 </head>
 
 <body>
+    <h1>Pizza Ordering System</h1>
     <main class="card">
-        <h1>Pizza Ordering System</h1>
         <form action="#" method="post">
             <fieldset>
                 <legend>Customer Information</legend>
@@ -26,28 +26,39 @@
 
             <fieldset>
                 <legend>The Order</legend>
-                    <div class="flex-row">
+                    <div class="form-grid">
                         <label for="crust">Crust Type (Required):</label>
-                        <input type="radio" name="crust" value="thin" required> Thin
-                        <input type="radio" name="crust" value="classic" required> Classic
-                        <input type="radio" name="crust" value="deep-dish" required> Deep Dish
+                        
+                        <div class="option-group flex-row">
 
-                        <label for="toppings">Toppings (Select at least 4 options):</label>
-                        <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
-                        <label for="pepperoni">Pepperoni</label>
-                        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
-                        <label for="mushrooms">Mushrooms</label>
-                        <input type="checkbox" id="Olives" name="toppings" value="olives">
-                        <label for="olives">Olives</label>
-                        <input type="checkbox" id="green-peppers" name="toppings" value="green-peppers">
-                        <label for="green-peppers">Green-peppers</label>
-                        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
-                        <label for="pineapple">Pineapple</label>
-                        <input type="checkbox" id="onions" name="toppings" value="onions">
-                        <label for="onions">Onions</label>
-                        <label for="quantity">Quantity (Required):</label>
-                        <input type="number" id="quantity" required min="1" max="10">
-                    </div>
+                            <input type="radio" name="crust" value="thin" required> Thin
+                            <input type="radio" name="crust" value="classic" required> Classic
+                            <input type="radio" name="crust" value="deep-dish" required> Deep Dish
+                        </div>
+                        
+                        <div class="option-group flex-wrap"></div>
+                            <label for="toppings">Toppings (Select at least 4 options):</label>
+                            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                            <input type="checkbox" id="Olives" name="toppings" value="olives">
+                            <label for="olives">Olives</label>
+                            <input type="checkbox" id="green-peppers" name="toppings" value="green-peppers">
+                            <label for="green-peppers">Green-peppers</label>
+                            <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                            <label for="pineapple">Pineapple</label>
+                            <input type="checkbox" id="onions" name="toppings" value="onions">
+                            <label for="onions">Onions</label>
+                        
+                            <label for="quantity">Quantity (Required):</label>
+                            <input type="number" id="quantity" required min="1" max="10">
+                        
+                        </div>
+
+
+                        
+                    </div>  
             </fieldset>
 
             <fieldset>
@@ -55,8 +66,10 @@
                 <div class="form-grid">
                     <label for="delivery instructions">Delivery Instructions:</label>
                     <input type="texarea" id="delivery instructions" placeholder="Any special instructions can be added here.">
+                    
                     <label for="preferred delivery date and time">Preferred Delivery Date and Time:</label>
                     <input type="datetime-local" id="preferred delivery date and time">
+                    
                     <label for="payment method">Payment Method:</label>
                     <select type="dropdown" id="payment method" required>
                         <option value="Cash">Cash</option>
@@ -66,52 +79,56 @@
                 </div>
             </fieldset>    
             
-            <button type="submit">Place Order</button>
-            <button type="reset">Reset Form</button>
+            <div class="group-buttons flex-wrap">
+                <button type="submit">Place Order</button>
+                <button type="reset">Reset Form</button>
+            </div>
+           
 
         </form>
-    </main>
+   
 
-    <aside>
-        <table>
-            <caption>Pizza Order Summary</caption>
+        <aside>
+            <table>
+                <caption>Pizza Order Summary</caption>
 
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Details</th>
-                    <th scope="col">Price</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Details</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr>
-                    <td>Base pizza</td>
-                    <td>Large (12"), Thin crust</td>
-                    <td>$16.99</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Base pizza</td>
+                        <td>Large (12"), Thin crust</td>
+                        <td>$16.99</td>
+                    </tr>
 
-                <tr>
-                    <td>Toppings</td>
-                    <td>Mushrooms, Olives, Extra cheese</td>
-                    <td>$4.50</td>
-                </tr>
+                    <tr>
+                        <td>Toppings</td>
+                        <td>Mushrooms, Olives, Extra cheese</td>
+                        <td>$4.50</td>
+                    </tr>
 
-                <tr>
-                    <td>Delivery fee</td>
-                    <td>Standard delivery</td>
-                    <td>$3.99</td>
-                </tr>
-            </tbody>
+                    <tr>
+                        <td>Delivery fee</td>
+                        <td>Standard delivery</td>
+                        <td>$3.99</td>
+                    </tr>
+                </tbody>
 
-            <tfoot>
-                <tr>
-                    <th scope="row">Total</th>
-                    <td>(example total)</td>
-                    <td>$25.48</td>
-                </tr>
-            </tfoot>
-        </table>
-    </aside>            
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td>(example total)</td>
+                        <td>$25.48</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </aside>  
+    </main>          
                 
 </html>

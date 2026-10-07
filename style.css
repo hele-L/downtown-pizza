@@ -1,4 +1,8 @@
-
+body {
+    font-family: sans-serif;
+    background: hsl(0, 5%, 96%);
+    padding: 20px;
+}
 
 
 main{
@@ -7,16 +11,79 @@ main{
 }
 
 fieldset {
+    
+    margin-bottom: 20px;
+    border: 1px solid #888888;
+}
+
+
+.form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+}
+
+.form-grid > label{
+    text-align: right;
+}
+
+
+option-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+flex-row{
+  flex-direction: row;
+  gap: 10px;
+}
+
+button-group{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+flex-wrap{
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 aside{
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
+}
+
+caption{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Validation feedback */
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+    border: 2px solid green;
+}
+
+select:valid, input[type="datetime-local"]:valid {
+    border: 2px solid green;
+}
+
+select:focus:invalid, input[type="datetime-local"]:focus:invalid {
+    border: 2px solid red;
+}
+
+table{
+  vertical-align: middle;
+  initial-letter-align: center;
+  padding: 10px;
+  gap: 15px;
+  width: 100%;
 }
 
 /* Mobile Responsive breakpoint */
