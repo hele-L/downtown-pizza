@@ -52,7 +52,7 @@
                             <label for="onions">Onions</label>
                         
                             <label for="quantity">Quantity (Required):</label>
-                            <input type="number" id="quantity" required min="1" max="10">
+                            <input type="number" id="quantity" required min="1" max="10" value="1">
                         
                         </div>
 
@@ -68,7 +68,7 @@
                     <input type="texarea" id="delivery instructions" placeholder="Any special instructions can be added here.">
                     
                     <label for="preferred delivery date and time">Preferred Delivery Date and Time:</label>
-                    <input type="datetime-local" id="preferred delivery date and time">
+                    <input type="datetime-local" id="preferred delivery date and time" required>
                     
                     <label for="payment method">Payment Method:</label>
                     <select type="dropdown" id="payment method" required>
@@ -80,8 +80,8 @@
             </fieldset>    
             
             <div class="group-buttons flex-wrap">
-                <button type="submit">Place Order</button>
-                <button type="reset">Reset Form</button>
+                <button type="submit" id="submit">Place Order</button>
+                <button type="reset" id="reset">Reset Form</button>
             </div>
            
 
@@ -123,7 +123,7 @@
                 <tfoot>
                     <tr>
                         <th scope="row">Total</th>
-                        <td>(example total)</td>
+                        <td></td>
                         <td>$25.48</td>
                     </tr>
                 </tfoot>
