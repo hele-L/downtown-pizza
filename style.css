@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     background: hsl(0, 5%, 96%);
     padding: 20px;
+    margin: 0;
 }
 
 
@@ -61,29 +62,41 @@ caption{
   margin-bottom: 10px;
 }
 
-/* Validation feedback */
+tbody tr:nth-child(odd) {
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+table tbody tr:hover {
+  background-color: hsl(55, 100%, 83%);
+}
+
+/* Validation feedback 
 input:not(:placeholder-shown):invalid {
     border: 2px solid red;
-}
+}*/
 
 input:not(:placeholder-shown):valid {
     border: 2px solid green;
 }
 
+/*
 select:valid, input[type="datetime-local"]:valid {
     border: 2px solid green;
-}
+}*/
 
-select:focus:invalid, input[type="datetime-local"]:focus:invalid {
+input:not([type="datetime-local"]):not(:placeholder-shown):invalid, input[type="datetime-local"]:focus:invalid,select:focus:invalid {
     border: 2px solid red;
 }
 
 table{
   vertical-align: middle;
   initial-letter-align: center;
-  padding: 10px;
-  gap: 15px;
+  padding: 20px;
   width: 100%;
+  border: 1px solid #888888;
+  background: #aba8a8;
+  border-collapse: collapse;
 }
 
 /* Mobile Responsive breakpoint */
